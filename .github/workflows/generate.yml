@@ -15,7 +15,7 @@ jobs:
           go-version: '>=1.19.3'
           cache: false
       - name: install fileadder
-        run: GOBIN=$(pwd) GOPRIVATE=github.com/Qman11010101/fileadder" go install github.com/Qman11010101/fileadder@latest
+        run: GOBIN=$(pwd) GOPRIVATE="github.com/Qman11010101/fileadder" go install github.com/Qman11010101/fileadder@latest
       - name: run fileadder
         run: fileadder
       - name: Commit & Push
