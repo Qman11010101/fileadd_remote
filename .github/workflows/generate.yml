@@ -16,8 +16,9 @@ jobs:
           cache: false
       - name: install fileadder
         run: GOBIN=$(pwd) GOPRIVATE="github.com/Qman11010101/fileadder" go install github.com/Qman11010101/fileadder@latest
+      - run: ls -la
       - name: run fileadder
-        run: fileadder
+        run: $(pwd)/fileadder
       - name: Commit & Push
         run: |
           set -x
